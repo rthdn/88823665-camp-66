@@ -1,0 +1,145 @@
+/* mystyle.css */
+
+/* ตั้งค่าพื้นหลังของหน้าเว็บ */
+body {
+    background: linear-gradient(45deg,white,#7462ff,pink);
+    height: 85vh;
+    background-size: 300% 300%;
+    animation: color 12s ease-in-out infinite;
+    margin: 20px; /* กำหนดระยะขอบรอบหน้า */
+    text-align: center; /* จัดข้อความให้อยู่กึ่งกลางแนวนอน */
+    font-family: Prompt; /* ใช้ฟอนต์ Prompt */
+}
+
+@keyframes color {
+    0% {
+        background-position: 0 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0 50%;
+    }
+}
+
+.form-container {
+    width: 330px; /* กำหนดความกว้าง */
+    margin: 70px auto; /* จัดให้อยู่กึ่งกลางแนวนอน */
+    padding: 35px; /* เพิ่มช่องว่างภายใน */
+    border-radius: 50px; /* ทำมุมให้โค้งมน */
+    background-color: rgba(255, 255, 255, 0.458); /* กำหนดพื้นหลัง */
+}
+
+/* กำหนดสไตล์หัวข้อ */
+.myh1 {
+    text-align: center; /* จัดให้อยู่ตรงกลาง */
+    width: 530px; /* ความกว้าง */
+    margin: auto; /* จัดให้อยู่กึ่งกลาง */
+    margin-bottom: 25px; /* ระยะห่างจากองค์ประกอบข้างล่าง */
+    margin-top: 35px; /* ระยะห่างจากขอบข้างบน */
+    color: #8372b5;
+    border-radius: 50px;
+    background-color: rgba(255, 255, 255, 0.458); /* กำหนดพื้นหลัง */
+}
+
+/* สไตล์ของกลุ่มฟอร์ม */
+.form-group {
+    display: flex; /* ใช้ Flexbox เพื่อจัดเรียง */
+    align-items: center; /* จัดให้อยู่ตรงกลางแนวตั้ง */
+    margin-bottom: 15px; /* เพิ่มช่องว่างระหว่างกลุ่มฟอร์ม */
+  }
+
+label {
+    flex: 0 0 120px; /* กำหนดขนาดแบบยืดหยุ่น */
+    text-align: right; /* จัดข้อความชิดขวา */
+    margin-right: 10px; /* ระยะห่างจากองค์ประกอบถัดไป */
+  }
+  
+input[type="text"],
+input[type="file"],
+select {
+    flex: 1; /* ขยายช่อง input ตามพื้นที่ที่เหลือ */
+  }
+
+/* สไตล์เพิ่มเติมสำหรับ label */
+.form-group label {
+    width: 150px; /* ความกว้างที่กำหนด */
+    text-align: left; /* จัดข้อความชิดซ้าย */
+    margin-right: 15px; /* เพิ่มระยะห่างระหว่าง label กับ input*/
+  }
+
+/* สไตล์สำหรับตัวเลือกเพลง */
+.music-options {
+    display: flex; /* ใช้ Flexbox */
+    justify-content: space-between; /* กระจายตัวเลือกให้เท่ากัน */
+    width: 100%; /* ความกว้างเต็ม */
+  }
+
+/* สไตล์สำหรับ input ประเภท date */
+input[type="date"] {
+    width: 100%; /* ความกว้างเต็ม */
+}
+
+/* สไตล์สำหรับกลุ่มข้อตกลง */
+.consent-group {
+    display: flex; /* ใช้ Flexbox */
+    align-items: center; /* จัดให้อยู่ตรงกลางแนวตั้ง */
+    justify-content: center; /* จัดให้อยู่กึ่งกลางแนวนอน */
+}
+
+/* สไตล์เมื่อ hover ที่ปุ่ม submit */
+.form-actions input[type="submit"]:hover {
+    background-color: #53b388; /* สีเขียว */
+    color: antiquewhite;
+    cursor: pointer; /* เปลี่ยนเคอร์เซอร์เป็น pointer */
+}
+
+/* สไตล์เมื่อ hover ที่ปุ่ม reset */
+.form-actions input[type="reset"]:hover {
+    background-color: #e46456; /* สีแดง */
+    color: antiquewhite;
+    cursor: pointer; /* เปลี่ยนเคอร์เซอร์เป็น pointer */
+}
+
+/* สำหรับ input type text */
+input[type="text"]:hover,
+input[type="date"]:hover {
+    font-size: 14px; /* เพิ่มขนาดตัวอักษร */
+    background-color: #ebd7f0; /* เปลี่ยนพื้นหลัง */
+    box-shadow: inset 0px 0px 5px blueviolet;
+}
+
+input[type="file"]:hover,
+textarea:hover,
+select:hover {
+    background-color: #ebd7f0; /* เปลี่ยนพื้นหลัง */
+    box-shadow: inset 0px 0px 5px blueviolet;
+}
+
+label:hover {
+    color: blueviolet;
+    font-size: 17px;
+}
+
+input[type="file"] {
+    width: 45px;
+}
+
+input[type="reset"],
+input[type="submit"] {
+    border-radius: 15px; /* โค้งมนของขอบ */
+}
+
+.myh1:hover {
+    font-size: 35px;
+}
+
+input:focus, 
+textarea:focus, 
+input[type="date"]:focus, 
+input[type="file"]:focus, 
+select:focus {
+    outline: 2px solid blueviolet;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.3);
+}

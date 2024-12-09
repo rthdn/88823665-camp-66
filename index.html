@@ -4,57 +4,60 @@
 <head>
     <title>Page Title</title>
     <meta charset="UTF-8" />
+    <link rel="stylesheet" href="mystyle.css"/>
 </head>
 
 <body>
-    <h1>Workshop #HTML - FORM</h1>
-    <table>
-        <tr>
-            <td>ชื่อ</td>
-            <td><input type="text"></td>
-        </tr>
-        <tr>
-            <td>สกุล</td>
-            <td><input type="text"></td>
-        </tr>
-        <tr>
-            <td>วัน/เดือน/ปีเกิด</td>
-            <td><input type="date"></td>
-        </tr>
-        <tr>
-            <td>เพศ</td>
-            <td><input type="radio">ชาย
-                <input type="radio">หญิง</td>
-        </tr>
-        <tr>
-            <td>รูป</td>
-            <td><input type="file"></td>
-        </tr>
-        <tr>
-            <td>ที่อยู่</td>
-            <td><textarea rows="5" cols="22"></textarea></td>
-        </tr>
-        <tr>
-            <td>สีที่ชอบ</td>
-            <td><select>
-                    <option color="สีแดง">สีแดง</option>
-                    <option color="สีน้ำเงิน">สีน้ำเงิน</option>
-                </select></td>
-        </tr>
-        <tr>
-            <td>แนวเพลงที่ชอบ</td>
-            <td><input type="radio">เพื่อชีวิต
-                <input type="radio">ลูกทุ่ง
-                <input type="radio">อื่นๆ</td>
-        </tr>
-    </table>
-    <br>
-            <input type="checkbox">ยินยอมให้เก็บข้อมูล
-    <br>
-    <br>
-    <br>
-            <input type="reset"style="margin-right: 145px;">
-            <input type="submit">
+    <h1 class="myh1">Workshop #HTML - FORM</h1>
+    <form class="form-container">
+        <div class="form-group">
+            <label for="first-name">ชื่อ</label>
+            <input type="text" id="first-name">
+        </div>
+        <div class="form-group">
+            <label for="last-name">สกุล</label>
+            <input type="text" id="last-name">
+        </div>
+        <div class="form-group">
+            <label for="birthdate">วัน/เดือน/ปีเกิด</label>
+            <input type="date" id="birthdate">
+        </div>
+        <div class="form-group">
+            <label>เพศ</label>
+            <input type="radio" name="gender" value="ชาย">ชาย
+            <input type="radio" name="gender" value="หญิง">หญิง
+        </div>
+        <div class="form-group">
+            <label for="photo">รูป</label>
+            <input type="file" id="photo">
+        </div>
+        <div class="form-group">
+            <label for="address">ที่อยู่</label>
+            <textarea id="address" rows="5" cols="26"></textarea>
+        </div>
+        <div class="form-group">
+            <label for="favorit-color">สีที่ชอบ</label>
+            <select id="favorit-color">
+                <option value="red">สีแดง</option>
+                <option value="blue">สีน้ำเงิน</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label>แนวเพลงที่ชอบ</label>
+            <div class="music-options">
+                <input type="radio" name="music" value="เพื่อชีวิต">เพื่อชีวิต
+                <input type="radio" name="music" value="ลูกทุ่ง">ลูกทุ่ง
+                <input type="radio" name="music" value="อื่นๆ">อื่นๆ
+            </div>
+        </div>
+        <div class="form-group consent-group">
+            <input type="checkbox" name="consent">ยินยอมให้เก็บข้อมูล
+        </div>
+        <div class="form-actions">
+            <input type="reset" value="Reset" style="margin-right: 180px;">
+            <input type="submit" value="Submit">
+        </div>
+    </form>
 </body>
 
 </html>
