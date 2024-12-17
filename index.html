@@ -4,60 +4,120 @@
 <head>
     <title>Page Title</title>
     <meta charset="UTF-8" />
-    <link rel="stylesheet" href="mystyle.css"/>
+    <!-- <link rel="stylesheet" href="mystyle.css"/> -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <script src="js/bootstrap.bundle.min.js"></script>
 </head>
 
 <body>
-    <h1 class="myh1">Workshop #HTML - FORM</h1>
-    <form class="form-container">
-        <div class="form-group">
-            <label for="first-name">ชื่อ</label>
-            <input type="text" id="first-name">
-        </div>
-        <div class="form-group">
-            <label for="last-name">สกุล</label>
-            <input type="text" id="last-name">
-        </div>
-        <div class="form-group">
-            <label for="birthdate">วัน/เดือน/ปีเกิด</label>
-            <input type="date" id="birthdate">
-        </div>
-        <div class="form-group">
-            <label>เพศ</label>
-            <input type="radio" name="gender" value="ชาย">ชาย
-            <input type="radio" name="gender" value="หญิง">หญิง
-        </div>
-        <div class="form-group">
-            <label for="photo">รูป</label>
-            <input type="file" id="photo">
-        </div>
-        <div class="form-group">
-            <label for="address">ที่อยู่</label>
-            <textarea id="address" rows="5" cols="26"></textarea>
-        </div>
-        <div class="form-group">
-            <label for="favorit-color">สีที่ชอบ</label>
-            <select id="favorit-color">
-                <option value="red">สีแดง</option>
-                <option value="blue">สีน้ำเงิน</option>
-            </select>
-        </div>
-        <div class="form-group">
-            <label>แนวเพลงที่ชอบ</label>
-            <div class="music-options">
-                <input type="radio" name="music" value="เพื่อชีวิต">เพื่อชีวิต
-                <input type="radio" name="music" value="ลูกทุ่ง">ลูกทุ่ง
-                <input type="radio" name="music" value="อื่นๆ">อื่นๆ
+    <div class="mt-3 container">
+        <form class="w-75 mx-auto">
+          <div class="row mb-2">
+            <label for="first-name" class="col-sm-2 col-form-label">ชื่อ <span class="text-danger"> *</span></label>
+            <div class="col-sm-10">
+              <input type="text" class="form-control" id="first-name" placeholder="ชื่อ">
             </div>
-        </div>
-        <div class="form-group consent-group">
-            <input type="checkbox" name="consent">ยินยอมให้เก็บข้อมูล
-        </div>
-        <div class="form-actions">
-            <input type="reset" value="Reset" style="margin-right: 180px;">
-            <input type="submit" value="Submit">
-        </div>
-    </form>
+          </div>
+          <div class="row mb-2">
+            <label for="last-name" class="col-sm-2 col-form-label">สกุล</label>
+            <div class="col-sm-10">
+              <input type="text" class="form-control" id="last-name">
+            </div>
+          </div>
+          <div class="row mb-2">
+              <label for="birthdate" class="col-sm-2 col-form-label">วัน/เดือน/ปีเกิด</label>
+              <div class="col-sm-10">
+                <input type="date" class="form-control" id="birthdate">
+              </div>
+            </div>
+          <div class="row mb-2">
+              <label for="age" class="col-sm-2 col-form-label">อายุ</label>
+              <div class="col-sm-10">
+                  <input type="text" class="form-control" id="age">
+              </div>
+          </div>
+          <fieldset class="row mb-2">
+            <legend class="col-form-label col-sm-2 pt-0">เพศ</legend>
+            <div class="col-sm-10">
+              <div class="form-check">
+                <input class="form-check-input" type="radio" name="gender" id="gridRadios1" value="ชาย" checked>
+                <label class="form-check-label" for="gridRadios1">
+                  ชาย
+                </label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="radio" name="gender" id="gridRadios2" value="หญิง">
+                <label class="form-check-label" for="gridRadios2">
+                  หญิง
+                </label>
+              </div>
+            </div>
+          </fieldset>
+          <div class="row mb-2">
+              <label for="photo" class="col-sm-2 col-form-label">รูป</label>
+              <div class="col-sm-10">
+                  <input type="file" class="form-control" id="photo">
+              </div>
+          </div>
+          <div class="row mb-2">
+              <label for="address" class="col-sm-2 col-form-label">ที่อยู่</label>
+              <div class="col-sm-10">
+                <textarea class="form-control" id="address" rows="5"></textarea>
+              </div>
+            </div>
+          <div class="row mb-2">
+              <label for="favorite-color" class="col-sm-2 col-form-label">สีที่ชอบ</label>
+              <div class="col-sm-10">
+                  <select class="form-select">
+                      <option selected>สีแดง</option>
+                      <option value="1">สีน้ำเงิน</option>
+                      <option value="2">สีชมพู</option>
+                  </select>
+              </div>
+          </div>
+          <fieldset class="row mb-2">
+              <legend class="col-form-label col-sm-2 pt-0">เพลงที่ชอบ</legend>
+              <div class="col-sm-10">
+                <div class="form-check">
+                  <input class="form-check-input" type="radio" name="music" id="gridRadios1" value="เพื่อชีวิต" checked>
+                  <label class="form-check-label" for="gridRadios1">
+                    เพื่อชีวิต
+                  </label>
+                </div>
+                <div class="form-check">
+                  <input class="form-check-input" type="radio" name="music" id="gridRadios2" value="ลูกทุ่ง">
+                  <label class="form-check-label" for="gridRadios2">
+                    ลูกทุ่ง
+                  </label>
+                </div>
+                <div class="form-check">
+                  <input class="form-check-input" type="radio" name="music" id="gridRadios3" value="อื่นๆ">
+                  <label class="form-check-label" for="gridRadios3">
+                    อื่นๆ
+                  </label>
+                </div>
+              </div>
+            </fieldset>
+            <div class="row mb-2">
+              <div class="col text-start">
+                <div class="form-check">
+                  <input class="form-check-input" type="checkbox" id="gridCheck1">
+                  <label class="form-check-label" for="gridCheck1">
+                    ยินยอมให้เก็บข้อมูล
+                  </label>
+              </div>
+              </div>
+            </div>
+            <div class="d-flex justify-content-between">
+              <div>
+                  <button type="reset" class="btn btn-secondary">Reset</button>
+              </div>
+              <div>
+                  <button type="submit" class="btn btn-success">Submit</button>
+              </div>
+          </div>
+        </form>
+    </div>
 </body>
 
 </html>
