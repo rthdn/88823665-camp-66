@@ -83,9 +83,12 @@
     <!--end::Required Plugin(Bootstrap 5)--><!--begin::Required Plugin(AdminLTE)-->
     <script src="{{ url('public/js/adminlte.js') }}"></script>
     <!--end::Required Plugin(AdminLTE)--><!--begin::OverlayScrollbars Configure-->
+<<<<<<< HEAD
 
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 
+=======
+>>>>>>> 80091ed9e07967fea20d42d0ce2f1da58cb7dcd9
     <script>
       const SELECTOR_SIDEBAR_WRAPPER = '.sidebar-wrapper';
       const Default = {

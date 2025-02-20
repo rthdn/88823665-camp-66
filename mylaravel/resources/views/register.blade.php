@@ -20,7 +20,11 @@
                                 OK
                             </div>
                             <div class="invalid-feedback" id="invalid-name">
+<<<<<<< HEAD
                                 กรุณาระบุ Name
+=======
+                                กรุณาระบุ name
+>>>>>>> 80091ed9e07967fea20d42d0ce2f1da58cb7dcd9
                             </div>
                         </div>
                         <div class="input-group mb-3">
@@ -30,7 +34,11 @@
                                 OK
                             </div>
                             <div class="invalid-feedback" id="invalid-email">
+<<<<<<< HEAD
                                 กรุณาระบุ Email
+=======
+                                กรุณาระบุ email
+>>>>>>> 80091ed9e07967fea20d42d0ce2f1da58cb7dcd9
                             </div>
                         </div>
                         <div class="input-group mb-3">
@@ -41,7 +49,11 @@
                                 OK
                             </div>
                             <div class="invalid-feedback" id="invalid-pass">
+<<<<<<< HEAD
                                 กรุณาระบุ Password
+=======
+                                กรุณาระบุ password
+>>>>>>> 80091ed9e07967fea20d42d0ce2f1da58cb7dcd9
                             </div>
                         </div>
                         <!--begin::Row-->
@@ -126,6 +138,7 @@
 
 @section('scripts')
     <script>
+<<<<<<< HEAD
         /*
         let $myval
         var myval2 = "value of myval2"
@@ -149,10 +162,19 @@
 
         function inputCheck() { // เช็ค input
             let isValid = true; // ข้อมูลถูกต้อง
+=======
+        function inputCheck() { // เช็ค input
+            let isValid = true; // ข้อมูลถูกต้อง
+
+>>>>>>> 80091ed9e07967fea20d42d0ce2f1da58cb7dcd9
             let name = $('#name'); // ชื่อจาก input
             let email = $('#email'); // อีเมลจาก input
             let pass = $('#pass'); // รหัสผ่านจาก input
             let mycheckbox = $('#mycheckbox'); // checkbox
+<<<<<<< HEAD
+=======
+
+>>>>>>> 80091ed9e07967fea20d42d0ce2f1da58cb7dcd9
             // ตรวจสอบว่า name ต้องไม่เป็นค่าว่าง
             if (name.val() == "") {
                 name.addClass('is-invalid');
@@ -161,6 +183,10 @@
             } else {
                 name.removeClass('is-invalid');
             }
+<<<<<<< HEAD
+=======
+
+>>>>>>> 80091ed9e07967fea20d42d0ce2f1da58cb7dcd9
             // ตรวจสอบว่า email ต้องมี @ และ .
             if (!email.val().includes("@") || !email.val().includes(".")) {
                 email.addClass('is-invalid');
@@ -169,6 +195,10 @@
             } else {
                 email.removeClass('is-invalid');
             }
+<<<<<<< HEAD
+=======
+
+>>>>>>> 80091ed9e07967fea20d42d0ce2f1da58cb7dcd9
             // ตรวจสอบความถูกต้องของรหัสผ่านด้วยฟังก์ชัน validatePassword
             if (!validatePassword(pass.val())) {
                 pass.addClass('is-invalid');
@@ -176,6 +206,10 @@
             } else {
                 pass.removeClass('is-invalid');
             }
+<<<<<<< HEAD
+=======
+
+>>>>>>> 80091ed9e07967fea20d42d0ce2f1da58cb7dcd9
             // ตรวจสอบว่า checkbox ต้องถูกติ๊ก
             if (!mycheckbox.prop('checked')) {
                 mycheckbox.addClass('is-invalid');
@@ -184,20 +218,36 @@
             } else {
                 mycheckbox.removeClass('is-invalid');
             }
+<<<<<<< HEAD
+=======
+
+>>>>>>> 80091ed9e07967fea20d42d0ce2f1da58cb7dcd9
             return isValid; // คืนค่า true ถ้าข้อมูลถูกต้อง
         }
 
         function validatePassword() {
             let pass = $('#pass').val(); // รับค่าจาก input password
+<<<<<<< HEAD
+=======
+
+>>>>>>> 80091ed9e07967fea20d42d0ce2f1da58cb7dcd9
             // ตรวจสอบว่ารหัสผ่านไม่เป็นค่าว่าง
             if (pass === "") {
                 $('#invalid-pass').html("password ต้องไม่เป็นค่าว่าง");
                 return false;
             }
+<<<<<<< HEAD
+=======
+
+>>>>>>> 80091ed9e07967fea20d42d0ce2f1da58cb7dcd9
             // ตัวแปรเช็คเงื่อนไขการมีตัวเลข พิมพ์เล็ก และพิมพ์ใหญ่
             let hasLower = false;
             let hasUpper = false;
             let hasDigit = false;
+<<<<<<< HEAD
+=======
+
+>>>>>>> 80091ed9e07967fea20d42d0ce2f1da58cb7dcd9
             // ตรวจสอบแต่ละตัวอักษรในรหัสผ่าน
             for (let i = 0; i < pass.length; i++) {
                 let char = pass[i];
@@ -209,16 +259,28 @@
                     hasDigit = true;
                 }
             }
+<<<<<<< HEAD
+=======
+
+>>>>>>> 80091ed9e07967fea20d42d0ce2f1da58cb7dcd9
             // หากขาดเงื่อนไขใด ๆ ให้แสดงข้อความเตือน
             if (!hasLower || !hasUpper || !hasDigit) {
                 $('#invalid-pass').html("password ต้องมี ตัวเลข ตัวอักษรภาษาอังกฤษพิมพ์เล็ก ตัวอักษรภาษาอังกฤษพิมพ์ใหญ่");
                 return false;
             }
+<<<<<<< HEAD
+=======
+
+>>>>>>> 80091ed9e07967fea20d42d0ce2f1da58cb7dcd9
             $('#invalid-pass').html(""); // ล้างข้อความถ้าผ่านการตรวจสอบ
             return true;
         }
     </script>
     <script>
+<<<<<<< HEAD
         console.log(myval2);
+=======
+        console.log(myval2)
+>>>>>>> 80091ed9e07967fea20d42d0ce2f1da58cb7dcd9
     </script>
 @endsection
