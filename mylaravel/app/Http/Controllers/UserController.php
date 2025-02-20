@@ -13,13 +13,10 @@ class UserController extends Controller
         return view('user.index', ['users'=> $users]);
     }
 
-<<<<<<< HEAD
     function login (Request $req) {
 
     }
 
-=======
->>>>>>> 80091ed9e07967fea20d42d0ce2f1da58cb7dcd9
     function edit ($id) {
         $user = User::find($id);
         $data['user'] = $user;
